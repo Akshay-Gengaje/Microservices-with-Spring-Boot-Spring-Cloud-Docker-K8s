@@ -1,0 +1,13 @@
+package com.akshay.rest_webservices.service;
+
+import com.akshay.rest_webservices.model.Employee;
+
+import java.util.List;
+
+public interface EmployeeService {
+    Employee save(Employee employee);
+
+    List<Employee> getAllEmployees();
+
+    Employee getEmployeeById(String id);
+}

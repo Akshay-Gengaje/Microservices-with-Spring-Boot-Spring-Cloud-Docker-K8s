@@ -1,9 +1,7 @@
 package com.akshay.rest_webservices.controller;
 
 import com.akshay.rest_webservices.model.User;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HomeController {
@@ -24,5 +22,11 @@ public class HomeController {
     @GetMapping("/user/{id}")
     public String pathVariable(@PathVariable String id){
         return id;
+    }
+
+//    http://localhost:8080/requestParam?name=Akshay
+    @GetMapping("/requestParam")
+    public String requestParam(@RequestParam String name, @RequestParam(required = false, defaultValue = "") String email){
+        return "Name - "+name +" Email id - "+email;
     }
 }
