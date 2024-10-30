@@ -1,5 +1,8 @@
 package com.akshay.rest_webservices.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties({"department"})
 public class Employee {
     private String employeeId;
     private String firstName;
