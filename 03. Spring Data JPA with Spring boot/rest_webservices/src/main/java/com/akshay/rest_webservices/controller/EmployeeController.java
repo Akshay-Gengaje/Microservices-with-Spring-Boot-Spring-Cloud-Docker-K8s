@@ -3,6 +3,7 @@ package com.akshay.rest_webservices.controller;
 import com.akshay.rest_webservices.model.Employee;
 import com.akshay.rest_webservices.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("v1/employee")
 public class EmployeeController {
+    @Qualifier("employeeService")
     @Autowired
     private EmployeeService employeeService;
 

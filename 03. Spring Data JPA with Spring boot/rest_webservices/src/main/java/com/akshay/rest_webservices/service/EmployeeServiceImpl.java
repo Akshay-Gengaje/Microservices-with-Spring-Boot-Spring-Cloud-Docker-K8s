@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@Service
+@Service("employeeService")
 public class EmployeeServiceImpl implements EmployeeService {
     List<Employee> employees = new ArrayList<>();
     @Override
